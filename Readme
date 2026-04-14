@@ -1,0 +1,65 @@
+# 📊 Análisis Académico Comparativo - Jefatura de Estudios
+
+Una aplicación web ligera (Single Page Application) diseñada específicamente para la **Jefatura de Estudios**. Permite analizar, comparar y visualizar fácilmente los resultados académicos (evaluaciones) a partir de archivos Excel generados por el sistema de gestión del centro.
+
+## ✨ Características Principales
+
+* 📂 **Procesamiento Local:** Los archivos Excel se procesan directamente en el navegador del usuario. Ningún dato escolar confidencial se envía a servidores externos.
+* 📈 **Estadísticas Automáticas:** Calcula instantáneamente el volumen y porcentaje de alumnos con 0, 1-2, 3-4 y 5 o más suspensos, divididos por grupos y niveles curriculares (ESO, Bachillerato, FP Básica).
+* 📊 **Visualización de Datos:** Genera gráficos de barras automáticos (usando Chart.js) para una interpretación visual rápida del rendimiento académico por grupo.
+* ⏳ **Comparativa Histórica:** Si se cargan múltiples archivos Excel de diferentes cursos académicos, la herramienta muestra automáticamente una comparativa histórica con respecto al año actual.
+* 🖨️ **Exportación Perfecta:**
+  * **Excel:** Exporta las tablas generadas a un nuevo archivo Excel limpio, con cada nivel educativo organizado en pestañas separadas.
+  * **PDF:** Sistema optimizado con reglas CSS `@media print` para exportar a PDF de forma nativa desde el navegador, asegurando que las tablas no se corten por la mitad y aplicando saltos de página por nivel.
+
+## 🛠️ Tecnologías Utilizadas
+
+* **HTML5 / JavaScript (ES6)**: Lógica principal nativa.
+* **Tailwind CSS**: Para el diseño responsivo y la interfaz de usuario (cargado vía CDN).
+* **SheetJS (xlsx.js)**: Para la lectura, procesamiento y exportación de archivos Excel en el navegador.
+* **Chart.js**: Para el renderizado de gráficos estadísticos.
+
+## 🚀 Cómo Empezar (Instalación)
+
+¡No requiere instalación de dependencias en local, ni configuraciones de servidor backend!
+
+1. Descarga o clona este repositorio.
+2. Haz doble clic en el archivo `Resultados.html` para abrirlo en cualquier navegador web moderno (Chrome, Edge, Firefox, Safari).
+3. ¡Listo para usar!
+
+## 📖 Instrucciones de Uso
+
+1. **Abre la herramienta** en tu navegador.
+2. **Selecciona la evaluación** que deseas analizar en el menú desplegable (1ª Evaluación, 2ª Evaluación, Ordinaria/Final, Extraordinaria).
+3. **Carga los archivos Excel:** Haz clic en "Seleccionar archivos" y elige uno o varios archivos Excel con las notas. 
+   > *💡 Consejo: Si seleccionas archivos de varios años, nómbralos alfabéticamente o por curso (ej. "2022-2023.xlsx", "2023-2024.xlsx"). El último en orden alfabético será tomado como el curso actual y los demás como el registro histórico.*
+4. Pulsa el botón **📊 GENERAR INFORME**.
+5. Utiliza los botones **💾 EXCEL** o **📄 PDF** para descargar y guardar los informes generados.
+
+## 📋 Requisitos del Archivo Excel (Estructura de Datos)
+
+Para que la herramienta funcione correctamente, el archivo Excel cargado debe contener la siguiente estructura de columnas (estándar para muchas plataformas de gestión educativa):
+
+* **Columna K:** Etapa educativa (Ej: "EDUCACIÓN SECUNDARIA OBLIGATORIA", "BACHILLERATO", "BÁSICA").
+* **Columna N:** Unidad / Grupo del alumno (Ej: "1º ESO A", "2º BACH B", "1º FPB").
+* **Columnas de Notas (Calificaciones numéricas):**
+  * **W:** Notas de la 1ª Evaluación
+  * **X:** Notas de la 2ª Evaluación
+  * **Z y AB:** Notas de la Evaluación Ordinaria / Final
+  * **AA:** Notas de la Evaluación Extraordinaria
+
+*(Nota: El sistema espera que la fila 1 sea la cabecera. La lectura de datos comenzará a partir de la fila 2).*
+
+## 🤝 Contribución
+
+Si deseas mejorar la herramienta, corregir algún error o adaptarla a los formatos de exportación específicos de tu Comunidad Autónoma, ¡toda ayuda es bienvenida!
+
+1. Haz un *Fork* del repositorio.
+2. Crea una rama con tu nueva funcionalidad (`git checkout -b feature/nueva-funcion`).
+3. Haz *Commit* de tus cambios (`git commit -m 'Añade nueva función'`).
+4. Haz *Push* a la rama (`git push origin feature/nueva-funcion`).
+5. Abre un *Pull Request*.
+
+## 📄 Licencia
+
+Este proyecto está distribuido bajo la Licencia MIT. Eres libre de utilizar, modificar y distribuir este software para uso personal o comercial.
