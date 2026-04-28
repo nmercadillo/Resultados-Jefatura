@@ -39,7 +39,7 @@ URL: https://nmercadillo.github.io/Resultados-Jefatura/
 
 ## 📋 Requisitos del Archivo Excel (Estructura de Datos)
 
-Para que la herramienta funcione correctamente, el archivo Excel cargado debe contener la siguiente estructura de columnas (estándar para muchas plataformas de gestión educativa):
+La aplicación se ha diseñado para trabajar datos del sistema Raíces. Dentro de la explotación de datos, se debe descargar el archivo de evaluación / Alumnos con materias y notas. Para que la herramienta funcione correctamente, el archivo Excel cargado debe contener la siguiente estructura de columnas (estándar para muchas plataformas de gestión educativa):
 
 * **Columna K:** Etapa educativa (Ej: "EDUCACIÓN SECUNDARIA OBLIGATORIA", "BACHILLERATO", "BÁSICA").
 * **Columna N:** Unidad / Grupo del alumno (Ej: "1º ESO A", "2º BACH B", "1º FPB").
